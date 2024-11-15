@@ -4,8 +4,8 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <h1>Hello Root Layout Auth</h1>
-    </div>
+    <main>
+      <div>{children}</div>
+    </main>
   );
 }
