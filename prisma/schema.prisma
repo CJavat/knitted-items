@@ -41,7 +41,7 @@ model Item {
   color       String[] @default([])
   slug        String
   price       Float    @default(0)
-  inStok      Int
+  inStock     Int
   tags        String[] @default([])
 
   //? Relaciones

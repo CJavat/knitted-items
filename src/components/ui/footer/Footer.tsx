@@ -8,13 +8,15 @@ import {
 export const Footer = () => {
   return (
     <div className="w-full border-t-2 border-t-indigo-200 flex justify-around items-center py-5">
-      <p>
+      <p className="text-sm">
         Copyright© {new Date().getFullYear()} -{" "}
         <span className="text-indigo-500">Knitted Items</span>{" "}
       </p>
 
       <div className="flex flex-col gap-2">
-        <p className="text-indigo-500">Siguenos en nuestras redes sociales</p>
+        <p className="text-indigo-500 text-sm">
+          Siguenos en nuestras redes sociales
+        </p>
 
         <div className="flex justify-around">
           <Link href="#">
