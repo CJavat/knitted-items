@@ -1,0 +1,38 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { getStockBySlug } from "@/src/actions";
+import { titleFont } from "@/src/config/fonts";
+
+interface Props {
+  slug: string;
+}
+
+export const StockLabel = ({ slug }: Props) => {
+  const [stock, setStock] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const getStock = async () => {
+      setIsLoading(true);
+      const inStock = await getStockBySlug(slug);
+
+      setStock(inStock);
+      setIsLoading(false);
+    };
+
+    getStock();
+  }, [slug]);
+
+  return (
+    <>
+      {isLoading ? (
+        <p className={`bg-gray-400 animate-pulse`}>&nbsp;</p>
+      ) : (
+        <p className={`${titleFont.className} antialiased font-bold text-lg`}>
+          Stock: {stock}
+        </p>
+      )}
+    </>
+  );
+};

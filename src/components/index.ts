@@ -3,6 +3,10 @@
 // PAYPAL
 // PRODUCT
 export * from "./product/quantity-selector/QuantitySelector";
+export * from "./product/slideshow/ProductMobileSlideShow";
+export * from "./product/slideshow/ProductSlideshow";
+export * from "./product/product-image/ProductImage";
+export * from "./product/stock-label/StockLabel";
 
 // PRODUCTS
 export * from "./products/product-grid/ProductGrid";

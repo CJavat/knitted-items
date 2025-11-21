@@ -18,7 +18,7 @@ import Link from "next/link";
 export const Sidebar = () => {
   const isSideMenuOpen = useUIStore((state) => state.isSideMenuOpen);
   const closeMenu = useUIStore((state) => state.closeSideMenu);
-
+  //TODO: En mobile, no se ve bien. corregirlo.
   return (
     <div>
       {/* Background black */}
